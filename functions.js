@@ -14,7 +14,7 @@ for (let i = 0; i < array.length; i++) {
 
 console.log(value)
 //space complexity:O(n)
-//time complexity:O(1)
+//time complexity:O(n2)
 
 
 
@@ -29,8 +29,8 @@ const hasUniqueCharacters = (word) =>{
   }
   console.log(hasUniqueCharacters('Monday'))
   console.log(hasUniqueCharacters('Moonday'))
-//space complexity:
-//time cpmplexity:
+//space complexity:o(n)
+//time cpmplexity:o(n)
 
   //pangram sentence
 
@@ -43,8 +43,8 @@ const isPangram = (string) => {
 
 console.log(isPangram('The quick brown fox jumps over the lazy dog!'));
 console.log(isPangram('I like cats, but not mice'));
-//space complexity:
-//time cpmplexity:
+//space complexity:o(1)
+//time cpmplexity:o(n)
 
 
   //longest Word:
@@ -59,5 +59,5 @@ function findLongestWord(arrayOfWords) {
   
   length = findLongestWord(['test','words']);
   console.log(length);
-//space complexity:
-//time complexity:
+//space complexity:o(n)
+//time complexity:o(n)

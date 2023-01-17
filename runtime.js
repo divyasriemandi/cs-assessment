@@ -11,7 +11,7 @@ function doublerAppend(nums){
     }
 
 }
-
+//o(1)
 
 function doublerInsert(nums){
 
@@ -23,7 +23,9 @@ function doublerInsert(nums){
     }
 
 }
-
+//o(n)
+//1 is faster than n
+//doubleappend insert we are using unshift method is performing better than push
 
 function getSizedArray(size){
     let array = [];
@@ -44,10 +46,15 @@ const extraLargeArray = getSizedArray(100000);
 
 // How long does it take to double every number in a given 
 // array? 
+//Answer:
+//When we double the size of array, it will take O (1) and sometimes O (N). 
+//Basically, when we increase size one by one, then all elements all copied every time, 
+//again create array, and then append.
 
 // Try it with first function
 perf.start();                     // Starts timer
 doublerAppend(extraLargeArray);
+//push, its complexity o(n)
 doublerAppend(tinyArray);
 doublerAppend(smallArray);
 doublerAppend(mediumArray);
@@ -58,6 +65,7 @@ let resultsAppend = perf.stop();  // Stops timer and save time results
 // Try it with second function
 perf.start();
 doublerInsert(extraLargeArray);
+//unshift, its complexity o(1)
 doublerInsert(smallArray);
 doublerInsert(tinyArray);
 doublerInsert(mediumArray);
